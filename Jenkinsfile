@@ -14,4 +14,36 @@ pipeline {
             }
         }
     }
+
+    stages {
+        stage('Build') {
+            steps {
+                echo "Building..."
+            }
+        }
+    }
+
+     stages {
+        stage('Test') {
+            steps {
+                echo "Testing..."
+            }
+        }
+    }
+
+     stages {
+        stage('Deploy') {
+            steps {
+                echo "Deploying..."
+            }
+        }
+    }
+
+     stages {
+        stage('Complete') {
+            steps {
+                echo "Completed..."
+            }
+        }
+    }
 }
