@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building..."
+                echo "Building the code..."
             }
             post {
                 success {
@@ -14,21 +14,39 @@ pipeline {
             }
         }
 
-        stage('Test') {
+        stage('Unit and Integration Test') {
             steps {
-                echo "Testing..."
+                echo "Running unit and integration tests..."
             }
         }
 
-        stage('Deploy') {
+        stage('Code Analysis') {
             steps {
-                echo "Deploying..."
+                echo "Analysing the code..."
             }
         }
 
-        stage('Complete') {
+        stage('Security Scan') {
             steps {
-                echo "Completed..."
+                echo "Performing security scan..."
+            }
+        }
+
+        stage('Deploy to Staging') {
+            steps {
+                echo "Deploying to Staging environment..."
+            }
+        }
+
+        stage('Integration Tests on Staging') {
+            steps {
+                echo "Running integration tests on staging..."
+            }
+        }
+
+        stage('Deploy to Production') {
+            steps {
+                echo "Deploying to production environment..."
             }
         }
     }
