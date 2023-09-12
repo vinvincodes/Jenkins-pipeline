@@ -31,10 +31,7 @@ pipeline {
         }
 
         stage('Security Scan') {
-            steps {
-                echo "Performing security scan..."
-                // Security scanning tool: OWASP, Snyk
-            }
+           
 
             post {
                 success {
